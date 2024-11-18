@@ -1,0 +1,349 @@
+/* Reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* General body styling */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  scroll-behavior: smooth;
+  background: linear-gradient(to bottom, rgb(18, 32, 41), rgb(127, 102, 132));
+}
+.header{
+  margin-left: 20px;
+  width: 50%;
+}
+.header-text h1{
+  font-size: 4rem;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 10px;
+  color: #d2d0d0;
+  font-weight: lighter;
+  
+}
+
+.header-text h2{
+  font-size: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 10px;
+  color: #94b9d7;
+  font-weight: lighter;
+}
+
+.header-text p{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: #d2d0d0;
+  font-weight: light;
+  
+}
+
+
+
+/* Navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  color: #ffffffae;
+  z-index: 1000;
+  background: none;
+
+}
+
+/* Navbar logo styling */
+.navbar-logo {
+  font-size: 1.8em;
+  font-weight: lighter;
+  font-family: 'Times New Roman', Times, serif;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* Navbar links */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-right: 70px;
+  
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+
+main {
+  margin-top: 70px; 
+}
+
+/* Section styling */
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+
+
+/* About page styling */
+.about-content {
+  width: 50%;
+  margin-left:20px;
+}
+
+.about-title {
+  font-size: 3em;
+  color: #94b9d7;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  
+}
+
+.about-content p {
+  font-size: 1.3em;
+  color: #d2d0d0;
+  line-height: 1.7;
+  font-weight: light;
+  margin-bottom: 20px; 
+}
+
+
+/* Skills Section */
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  padding: 40px 0;
+  
+}
+
+.skills h2 {
+  font-size: 3em;
+  color: #94b9d7;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  margin: 90px 0 0 ;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.733);
+}
+
+/* Center images and add floating effect */
+.technologies-images {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 100px;
+}
+
+.technologies-images img {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #d2d0d0;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #2a2a2a;
+  margin-top: 200px;
+  margin-left: 20px;
+  animation: bubble-float 3s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ 
+}
+
+.technologies-images img:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+/* Bubble Floating Animation */
+@keyframes bubble-float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+
+.projects {
+  padding: 1rem;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 3rem;
+  color: #94b9d7;
+  text-align: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.733); /* Add a white bottom border */
+  padding-bottom: 0.5rem; /* Space between text and border */
+  margin-bottom: 40rem; /* Space between title and cards */
+}
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 1.8rem;
+  width: 100%; 
+  justify-content: center;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 250px;
+  transition: transform 0.3s ease; 
+  animation: bubble-float 3s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05); 
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-link {
+  color: #add8e6;
+  text-decoration: underline;
+}
+
+
+
+
+/* Footer styling */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #29292a79;
+  color: #fff;
+}
+
+.contact-me {
+  margin-top: 15px;
+}
+
+.contact-me h4 {
+  margin-bottom: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.contact-me p {
+  margin: 5px 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.download-cv-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: #fff;
+  background-color: #5b8cb6da;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-cv-btn:hover {
+  background-color: #548fc0;
+  transform: scale(1.05);
+}
+
+
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  section {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  .about-title {
+    font-size: 2.5em;
+  }
+}
